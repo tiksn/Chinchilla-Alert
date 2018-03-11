@@ -1,5 +1,5 @@
 #include "MotionDetector.h"
-
+#include <Arduino.h>
 
 
 MotionDetector::MotionDetector(int pin, int location)
@@ -15,4 +15,5 @@ MotionDetector::~MotionDetector()
 
 void MotionDetector::initialize()
 {
+    pinMode(pin, INPUT);
 }
