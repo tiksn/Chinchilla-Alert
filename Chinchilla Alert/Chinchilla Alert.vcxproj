@@ -80,12 +80,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CompositeMotionDetector.h" />
     <ClInclude Include="LcdDisplay.h" />
+    <ClInclude Include="MotionDetector.h" />
     <ClInclude Include="SoundAlarm.h" />
     <ClInclude Include="__vm\.Chinchilla Alert.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CompositeMotionDetector.cpp" />
     <ClCompile Include="LcdDisplay.cpp" />
+    <ClCompile Include="MotionDetector.cpp" />
     <ClCompile Include="SoundAlarm.cpp" />
   </ItemGroup>
   <PropertyGroup>
