@@ -1,13 +1,14 @@
+#include "LcdDisplay.h"
+
+LcdDisplay lcdDisplay;
+
 void setup()
 {
-
-  /* add setup code here */
-
+    lcdDisplay.initialize();
 }
 
 void loop()
 {
-
-  /* add main program code here */
-
+    lcdDisplay.print("Chinchilla Alert");
+    delay(3000);
 }
