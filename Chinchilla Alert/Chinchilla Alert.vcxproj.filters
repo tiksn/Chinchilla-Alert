@@ -24,9 +24,15 @@
     <ClInclude Include="LcdDisplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SoundAlarm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LcdDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundAlarm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

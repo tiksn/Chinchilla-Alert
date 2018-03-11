@@ -81,10 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LcdDisplay.h" />
+    <ClInclude Include="SoundAlarm.h" />
     <ClInclude Include="__vm\.Chinchilla Alert.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LcdDisplay.cpp" />
+    <ClCompile Include="SoundAlarm.cpp" />
   </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
