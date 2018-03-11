@@ -7,7 +7,7 @@ LcdDisplay lcdDisplay;
 SoundAlarm soundAlarm;
 
 MotionDetector motionDetectors{ MotionDetector(13, 1) };
-CompositeMotionDetector compositeMotionDetector(&motionDetectors, 1);
+CompositeMotionDetector compositeMotionDetector(&soundAlarm, &motionDetectors, 1);
 
 void setup()
 {
@@ -20,9 +20,5 @@ void setup()
 
 void loop()
 {
-    //soundAlarm.turnOn();
-    delay(1000);
-
-    soundAlarm.turnOff();
-    delay(10000);
+    compositeMotionDetector.detect();
 }

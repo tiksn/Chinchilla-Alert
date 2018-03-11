@@ -10,5 +10,7 @@ public:
     ~MotionDetector();
 
     void initialize();
+
+    bool detect();
 };
 

@@ -17,3 +17,11 @@ void MotionDetector::initialize()
 {
     pinMode(pin, INPUT);
 }
+
+bool MotionDetector::detect()
+{
+    if (digitalRead(pin) == HIGH)
+        return true;
+
+    return false;
+}

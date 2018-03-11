@@ -2,8 +2,9 @@
 #include <Arduino.h>
 
 
-CompositeMotionDetector::CompositeMotionDetector(MotionDetector* motionDetectors, int motionDetectorsCount)
+CompositeMotionDetector::CompositeMotionDetector(SoundAlarm *soundAlarm, MotionDetector* motionDetectors, int motionDetectorsCount)
 {
+    this->soundAlarm = soundAlarm;
     this->motionDetectors = motionDetectors;
     this->motionDetectorsCount = motionDetectorsCount;
 }
@@ -22,4 +23,19 @@ void CompositeMotionDetector::initialize()
 
     //the time we give the sensor to calibrate (10-60 secs according to the datasheet)
     delay(30000);
+}
+
+void CompositeMotionDetector::detect()
+{
+    for (int i = 0; i < motionDetectorsCount; i++)
+    {
+        if (motionDetectors[i].detect())
+        {
+            soundAlarm->turnOn();
+
+            return;
+        }
+    }
+
+    soundAlarm->turnOff();
 }
