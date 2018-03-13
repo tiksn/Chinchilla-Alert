@@ -27,12 +27,24 @@
     <ClInclude Include="SoundAlarm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MotionDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CompositeMotionDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LcdDisplay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SoundAlarm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MotionDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositeMotionDetector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

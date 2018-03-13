@@ -2,4 +2,5 @@
 
 ## Circuit Design
 
-![Board](ECAD_bb.svg)
+![Board](ECAD_bb.png)
+
