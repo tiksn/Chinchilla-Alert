@@ -1,5 +1,1 @@
-﻿# Chinchilla Alert
-
-## Circuit Design
-
-![Board](ECAD_bb.svg)
+﻿﻿# Chinchilla Alert## Circuit Design![Board](ECAD_bb.png)
