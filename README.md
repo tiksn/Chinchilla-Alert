@@ -1,4 +1,4 @@
-﻿﻿# Chinchilla Alert
+﻿# Chinchilla Alert
 
 ## Circuit Design
 
