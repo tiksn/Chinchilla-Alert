@@ -25,3 +25,8 @@ bool MotionDetector::detect()
 
     return false;
 }
+
+int MotionDetector::getLocation()
+{
+    return location;
+}

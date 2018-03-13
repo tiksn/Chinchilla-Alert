@@ -2,9 +2,10 @@
 #include <Arduino.h>
 
 
-CompositeMotionDetector::CompositeMotionDetector(SoundAlarm *soundAlarm, MotionDetector* motionDetectors, int motionDetectorsCount)
+CompositeMotionDetector::CompositeMotionDetector(SoundAlarm *soundAlarm, LcdDisplay *lcdDisplay, MotionDetector* motionDetectors, int motionDetectorsCount)
 {
     this->soundAlarm = soundAlarm;
+    this->lcdDisplay = lcdDisplay;
     this->motionDetectors = motionDetectors;
     this->motionDetectorsCount = motionDetectorsCount;
 }
@@ -31,11 +32,27 @@ void CompositeMotionDetector::detect()
     {
         if (motionDetectors[i].detect())
         {
+            currentLocation = motionDetectors[i].getLocation();
+
             soundAlarm->turnOn();
+
+            if (currentLocation != previousLocation)
+            {
+                lcdDisplay->print("Alert location", "L01");
+                previousLocation = currentLocation;
+            }
 
             return;
         }
     }
 
+    currentLocation = -1;
+
     soundAlarm->turnOff();
+
+    if (currentLocation != previousLocation)
+    {
+        lcdDisplay->ready();
+        previousLocation = currentLocation;
+    }
 }

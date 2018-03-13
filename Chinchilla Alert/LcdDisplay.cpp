@@ -15,6 +15,11 @@ void LcdDisplay::initialize()
     lcd.clear();
 }
 
+void LcdDisplay::ready()
+{
+    print("Chinchilla Alert", "1.0.0");
+}
+
 void LcdDisplay::print(char* line1)
 {
     lcd.clear();

@@ -12,5 +12,7 @@ public:
     void initialize();
 
     bool detect();
+
+    int getLocation();
 };
 
