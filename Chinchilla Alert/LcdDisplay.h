@@ -12,6 +12,7 @@ public:
     ~LcdDisplay();
 
     void initialize();
+    void ready();
     void print(char* line1);
     void print(char* line1, char* line2);
 };

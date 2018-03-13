@@ -7,13 +7,13 @@ LcdDisplay lcdDisplay;
 SoundAlarm soundAlarm;
 
 MotionDetector motionDetectors{ MotionDetector(13, 1) };
-CompositeMotionDetector compositeMotionDetector(&soundAlarm, &motionDetectors, 1);
+CompositeMotionDetector compositeMotionDetector(&soundAlarm, &lcdDisplay, &motionDetectors, 1);
 
 void setup()
 {
     Serial.begin(9600);
     lcdDisplay.initialize();
-    lcdDisplay.print("Chinchilla Alert", "1.0.0");
+    lcdDisplay.ready();
     soundAlarm.initialize();
     compositeMotionDetector.initialize();
 }
