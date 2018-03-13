@@ -13,7 +13,7 @@ void setup()
 {
     Serial.begin(9600);
     lcdDisplay.initialize();
-    lcdDisplay.print("Chinchilla Alert");
+    lcdDisplay.print("Chinchilla Alert", "1.0.0");
     soundAlarm.initialize();
     compositeMotionDetector.initialize();
 }
